@@ -490,7 +490,7 @@
                 <!-- No HTTPS configuration discovered -->
                 <host name="default-host" alias="localhost">
                     <location name="/" handler="welcome-content"/>
-		    <access-log pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b &quot;%{i,Referer}&quot; &quot;%{i,User-Agent}&quot; &quot;%{i,COOKIE}&quot; &quot;%{o,SET-COOKIE}&quot; %S &quot;%I&quot; %T"/>
+		    <access-log pattern="&quot;%{X-Forwarded-proto}i&quot; %h %l %u %t &quot;%r&quot; %s %b &quot;%{i,Referer}&quot; &quot;%{i,User-Agent}&quot; &quot;%{i,COOKIE}&quot; &quot;%{o,SET-COOKIE}&quot; %S &quot;%I&quot; %T"/>
                     <filter-ref name="server-header"/>
                     <filter-ref name="x-powered-by-header"/>
                 </host>
